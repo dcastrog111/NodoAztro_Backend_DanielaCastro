@@ -7,7 +7,9 @@ import org.example.service.Proveedor;
 import org.example.service.Viaje;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main
 {
@@ -36,6 +38,13 @@ public class Main
 
             System.out.println(listaAdministrador.get(i).toString());
         }
+
+        //Creación de mapa de administrador
+
+        Map<Integer,Administrador> mapAdmo = new HashMap<>();
+        mapAdmo.put(1,a1);
+        mapAdmo.put(2,a1);
+        mapAdmo.put(3,a1);
 
         //Agregar viajes
 
@@ -67,6 +76,13 @@ public class Main
         listaClientes.add(c2);
         listaClientes.add(c3);
 
+        //Creación de mapa de Clientes
+
+        Map<Integer,Cliente> mapClientes = new HashMap<>();
+        mapClientes.put(1,c1);
+        mapClientes.put(2,c2);
+        mapClientes.put(3,c3);
+
         //Crear usuario GestorViajes
 
         GestorViajes gv1 = new GestorViajes("12345", "Otto", "Mira", "23-08-1992",
@@ -84,6 +100,12 @@ public class Main
         listaGestorViaje.add(gv1);
         listaGestorViaje.add(gv2);
 
+        //Creación de mapa de Gestores de viaje
+
+        Map<Integer,GestorViajes> mapGestores = new HashMap<>();
+        mapGestores.put(1,gv1);
+        mapGestores.put(2,gv2);
+
         //Crear proveedores
         Proveedor p1 = new Proveedor("pa001","trivago","Alojamiento");
         Proveedor p2 = new Proveedor("pa002","Hoteles.com","Alojamiento");
@@ -99,7 +121,15 @@ public class Main
         listaProveedor.add(p3);
         listaProveedor.add(p4);
 
-        //Imprimir proveedores
+        //Creación de mapa de Proveedores
+
+        Map<Integer,Proveedor> mapProveedores = new HashMap<>();
+        mapProveedores.put(1,p1);
+        mapProveedores.put(2,p2);
+        mapProveedores.put(3,p3);
+        mapProveedores.put(4,p4);
+
+        //Imprimir lista de proveedores
         System.out.println("---------------------------------------------------------");
         System.out.println("Lista de proveedores");
         System.out.println();
@@ -107,6 +137,9 @@ public class Main
 
             System.out.println(listaProveedor.get(i).toString());
         }
+
+
+
 
     }
 }
